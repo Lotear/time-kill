@@ -1,0 +1,8 @@
+name: TimeKill
+version: @version@
+depend: [Tap, ProtocolLib]
+main: com.github.lotear.timekill.TimeKillPlugin
+commands:
+  tk:
+    usage: /<command> start stop
+    permission: timekill.command
