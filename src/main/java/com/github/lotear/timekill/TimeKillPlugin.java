@@ -7,8 +7,10 @@ import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketAdapter;
 import com.comphenix.protocol.events.PacketEvent;
 import com.github.noonmaru.tap.command.TabSupport;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -42,7 +44,10 @@ public final class TimeKillPlugin extends JavaPlugin
             @Override
             public void onPacketSending(PacketEvent event)
             {
+                ItemStack item = event.getPacket().getItemModifier().read(0);
 
+                if (item != null && item.getType() == Material.COMPASS)
+                    event.getPacket().getItemModifier().write(0, new ItemStack(Material.AIR));
             }
         });
     }
