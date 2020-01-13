@@ -83,7 +83,7 @@ public class TimePlayer
     public void onUpdate()
     {
         int sec = remainTick / 20;
-        Packet.INFO.chat(String.format("남은 시간 : %02d:%02d", sec / 60, sec % 60), ChatType.GAME_INFO).sendTo(this.bukkitPlayer);
+        Packet.INFO.chat(String.format(ChatColor.GREEN + "남은 시간 : %02d:%02d", sec / 60, sec % 60), ChatType.GAME_INFO).sendTo(this.bukkitPlayer);
         remainTick--;
 
         if (remainTick <= 0)
