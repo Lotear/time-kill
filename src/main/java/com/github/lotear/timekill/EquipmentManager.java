@@ -18,12 +18,12 @@ public class EquipmentManager
         list.add(new TimeEquipment(20 * 60 * 20,
                 create(Material.DIAMOND_SWORD, "고대의 배틀엑스", null),
                 create(Material.BOW, "강력한 총", Enchantment.ARROW_INFINITE),
-                null, create(Material.GOLD_CHESTPLATE, "화려한 갑옷", null), null, null
+                null, create(Material.IRON_CHESTPLATE, "화려한 갑옷", null), null, null
         ));
         list.add(new TimeEquipment(4 * 60 * 20,
                 create(Material.IRON_SWORD, "푸른 검기의 칼", null),
                 create(Material.BOW, "강력한 총", Enchantment.ARROW_INFINITE),
-                null, create(Material.GOLD_CHESTPLATE, "화려한 갑옷", null), null, null
+                null, create(Material.IRON_CHESTPLATE, "화려한 갑옷", null), null, null
         ));
         list.add(new TimeEquipment(2 * 60 * 20,
                 create(Material.GOLD_SWORD, "평범한 칼", null),
