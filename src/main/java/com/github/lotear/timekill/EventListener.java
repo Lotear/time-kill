@@ -115,11 +115,14 @@ public class EventListener implements Listener
     @EventHandler
     public void onPlayerDropCancel(EntityDamageEvent ev)
     {
+        Player player = (Player) ev.getEntity();
+
         if (ev.getCause() == EntityDamageEvent.DamageCause.FALL)
         {
             ev.setCancelled(true);
         }
     }
+
 
     @EventHandler
     public void onPlayerDropItem(PlayerDropItemEvent event)
